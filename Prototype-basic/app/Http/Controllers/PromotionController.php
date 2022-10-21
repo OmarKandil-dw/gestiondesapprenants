@@ -19,32 +19,10 @@ class PromotionController extends Controller
     }
 
     public function insert(Request $request){
-        $addpromotion = new promotion();
-        $addpromotion->name = $request->name;
-        $addpromotion->save(); 
-        return redirect('index');
+        $addmodal = new promotion();
+        $addmodal->name = $request->name;
+        $addmodal->save(); 
 
-    }
-
-    public function delete(Request $request){
-        $deletepromotion = new promotion();
-        $deletepromotion::where('id', $request->id)->delete();
-        return redirect('index');
-    }
-
-
-    public function update_promotion($id){
-        $edit = new promotion();    
-        $promotion = $edit::where('id', $id )->get();
-        return view('update_promotion', compact('promotion'));
-    }
-    
-
-    public function edit($id,Request $request){
-        $editpromotion = promotion::where('id',$id)->first();
-        $editpromotion->name = $request->name;
-        $editpromotion->save();
-        return redirect('index');
-        // return $editpromotion;
+        // $add = 
     }
 }
