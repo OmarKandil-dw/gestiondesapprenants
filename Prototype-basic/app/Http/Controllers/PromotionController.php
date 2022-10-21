@@ -18,7 +18,7 @@ class PromotionController extends Controller
         return view('add');
     }
 
-    public function insert(R $request){
+    public function insert(Request $request){
         $addmodal = new promotion();
         $addmodal->name = $request->name;
         $addmodal->save(); 
