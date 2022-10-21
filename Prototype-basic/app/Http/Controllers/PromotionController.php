@@ -40,7 +40,7 @@ class PromotionController extends Controller
     }
     
 
-    public function edit(Request $request, $id){
+    public function edit($id,Request $request){
         $editpromotion = promotion::where('id',$id)->first();
         $editpromotion->name = $request->name;
         $editpromotion->save();
