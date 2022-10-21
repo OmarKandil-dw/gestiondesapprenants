@@ -1,11 +1,8 @@
 
 <form action="/edit/{{ $promotion[0]->id }}" method="get">
 
-    @foreach ($promotion as $row)
-
-    <input type="text" name="name" value="{{ $row->name }} ">
+    <input type="text" name="name" value="{{ $promotion[0]->name }} ">
     <button>Edit</button>
 </form>
 
-@endforeach
 
