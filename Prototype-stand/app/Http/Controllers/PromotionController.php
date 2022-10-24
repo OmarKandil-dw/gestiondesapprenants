@@ -47,5 +47,5 @@ class PromotionController extends Controller
         return redirect('index');
         // return $editpromotion;
     }
-    ,
+    
 }
