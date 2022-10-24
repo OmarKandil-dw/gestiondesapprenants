@@ -9,6 +9,31 @@ class PromotionController extends Controller
 {
     //
 
+    public function select1(){
+        $data = promotion::all();
+        return view('omar', compact('data'));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function select(){
         $data = promotion::all();
         return view ('index', compact("data"));
