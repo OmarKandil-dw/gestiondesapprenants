@@ -47,4 +47,18 @@ class PromotionController extends Controller
         return redirect('index');
         // return $editpromotion;
     }
+
+    public function search($name=null){ 
+        // dd($request->search);
+        //  dd($data);
+        if($name == null){
+            $data =promotion::all();
+            return view('index_search',compact('data'));        }
+        else {
+            $data =promotion::where('name', 'like','%'.$name.'%')->get();
+            return view('index_search',compact('data'));
+
+        }
+
+    }
 }

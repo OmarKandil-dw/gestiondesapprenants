@@ -33,5 +33,12 @@ Route::get('/update_promotion/{id}', [ PromotionController::class,'update_promot
 Route::get('/edit/{id}', [ PromotionController::class,'edit']);
 
 
+Route::get('search/{name}',[PromotionController::class,'search']);
+Route::get('search',[PromotionController::class,'search']);
+
+
+
+
+
 // Route::post('/edit', [ MainController::class,'edit']);
 

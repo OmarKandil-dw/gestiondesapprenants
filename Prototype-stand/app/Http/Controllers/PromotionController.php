@@ -44,8 +44,8 @@ class PromotionController extends Controller
         $editpromotion = promotion::where('id',$id)->first();
         $editpromotion->name = $request->name;
         $editpromotion->save();
-        return redirect('index');
-        // return $editpromotion;
+        return redirect('index')->with('status',"Updated Successfully");
     }
+
     
 }
